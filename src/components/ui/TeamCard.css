@@ -1,0 +1,69 @@
+.team-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(37, 3, 20, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(37, 3, 20, 0.15);
+}
+
+.team-avatar {
+  margin-bottom: 1.5rem;
+}
+
+.team-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #250314;
+}
+
+.team-position {
+  color: #9c27b0;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.team-bio {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.team-email {
+  color: #9c27b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.team-email:hover {
+  text-decoration: underline;
+}

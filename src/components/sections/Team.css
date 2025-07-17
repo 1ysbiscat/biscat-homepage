@@ -1,0 +1,42 @@
+.team {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+/* 프로젝트 섹션 제목 스타일 */
+.team .section-title {
+  margin-bottom: 0.5rem;
+  color: #9c27b0;
+}
+
+.team .section-subtitle {
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team .section-subtitle {
+  margin-bottom: 3rem;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,245 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modal-header {
+  text-align: center;
+  padding: 3rem 3rem 2rem;
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-icon {
+  margin-bottom: 1.5rem;
+}
+
+.modal-icon-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.modal-icon-emoji {
+  font-size: 4rem;
+}
+
+.modal-icon-fallback {
+  font-size: 4rem;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.modal-body {
+  padding: 2rem 3rem 3rem;
+}
+
+.modal-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.modal-detailed-description {
+  margin-bottom: 2rem;
+}
+
+.modal-detailed-description h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #9c27b0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #9c27b0;
+  padding-bottom: 0.5rem;
+}
+
+.modal-detailed-description h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.modal-detailed-description p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.modal-detailed-description ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-detailed-description li {
+  padding: 0.5rem 0;
+  color: #555;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.modal-detailed-description li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #9c27b0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.modal-detailed-description strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.modal-features h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #9c27b0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #9c27b0;
+  padding-bottom: 0.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #9c27b0;
+}
+
+.feature-icon {
+  color: #9c27b0;
+  font-weight: bold;
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.feature-text {
+  color: #333;
+  font-weight: 500;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .modal-backdrop {
+    padding: 1rem;
+  }
+  
+  .modal-header {
+    padding: 2rem 2rem 1.5rem;
+  }
+  
+  .modal-title {
+    font-size: 2rem;
+  }
+  
+  .modal-body {
+    padding: 1.5rem 2rem 2rem;
+  }
+  
+  .modal-icon-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-backdrop {
+    padding: 0.5rem;
+  }
+  
+  .modal-header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  .modal-title {
+    font-size: 1.8rem;
+  }
+  
+  .modal-body {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+}

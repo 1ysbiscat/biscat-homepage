@@ -1,0 +1,109 @@
+.footer {
+  background: #250314;
+  color: #ffffff;
+  padding: 3rem 0 1rem;
+  position: relative;
+  z-index: 10;
+  margin-top: 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #9c27b0;
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-contact strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-company-info {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  margin: 0;
+}
+
+/* 푸터 로고 스타일 */
+.footer-logo {
+  margin-bottom: 2rem;
+}
+
+.footer-logo-image {
+  height: 100px;
+  width: auto;
+  filter: brightness(0) invert(1); /* 로고를 흰색으로 변환 */
+}
+
+.footer-logo-text {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

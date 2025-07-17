@@ -1,0 +1,122 @@
+.service-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(37, 3, 20, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(156, 39, 176, 0.3);
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-icon-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(156, 39, 176, 0.2));
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-image {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(156, 39, 176, 0.3));
+}
+
+.service-icon-emoji {
+  display: inline-block;
+  font-size: 3rem;
+}
+
+.service-icon-fallback {
+  font-size: 3rem;
+  color: #9c27b0;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #9c27b0;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-title {
+  color: white;
+}
+
+.service-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-features {
+  list-style: none;
+  text-align: left;
+}
+
+.service-features li {
+  padding: 0.3rem 0;
+  color: #555;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-features li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #9c27b0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-features li::before {
+  color: white;
+}
+
+.service-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  text-align: center;
+  border-top: 1px solid #eee;
+  transition: border-color 0.3s ease;
+}
+
+.service-card:hover .service-card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.click-hint {
+  color: #9c27b0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .click-hint {
+  opacity: 1;
+  color: white;
+}

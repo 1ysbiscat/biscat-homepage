@@ -1,0 +1,199 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(37, 3, 20, 0.4);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  margin-bottom: 3rem;
+}
+
+.hero-logo-image {
+  height: 300px;
+  width: auto;
+  filter: brightness(0) invert(1) /* 로고를 흰색으로 변환 */
+          drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))
+          drop-shadow(0 0 16px rgba(255, 255, 255, 0.3))
+          drop-shadow(0 0 24px rgba(255, 255, 255, 0.2));
+  transition: all 0.3s ease;
+}
+
+.hero-logo-image:hover {
+  filter: brightness(0) invert(1) /* 로고를 흰색으로 변환 */
+          drop-shadow(0 0 12px rgba(255, 255, 255, 0.6))
+          drop-shadow(0 0 24px rgba(255, 255, 255, 0.4))
+          drop-shadow(0 0 36px rgba(255, 255, 255, 0.3));
+}
+
+.hero-logo-text {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4), 
+               0 0 20px rgba(255, 255, 255, 0.3), 
+               0 0 30px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero-logo-text:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.4), 
+               0 0 45px rgba(255, 255, 255, 0.3);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #ffffff;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scroll-arrow {
+  width: 30px;
+  height: 30px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .hero-logo-image {
+    height: 180px;
+    filter: brightness(0) invert(1) /* 로고를 흰색으로 변환 */
+            drop-shadow(0 0 5px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 10px rgba(255, 255, 255, 0.3))
+            drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+  }
+  
+  .hero-logo-text {
+    font-size: 3.5rem;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 
+                 0 0 16px rgba(255, 255, 255, 0.3), 
+                 0 0 24px rgba(255, 255, 255, 0.2);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn {
+    width: 200px;
+  }
+}
