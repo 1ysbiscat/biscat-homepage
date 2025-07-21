@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { company, contactInfo, socialLinks } from '../../data/siteData';
+import { company, contactInfo } from '../../data/siteData';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -44,9 +44,8 @@ const Footer: React.FC = () => {
             <div className="footer-contact">
               <p><strong>상호명:</strong> {company.name}</p>
               <p><strong>대표자:</strong> 고동욱</p>
-              <p>� {contactInfo.address}</p>
+              <p>📍 {contactInfo.address}</p>
               <p>✉️ {contactInfo.email}</p>
-              <p>🕒 {contactInfo.businessHours}</p>
             </div>
           </div>
         </div>

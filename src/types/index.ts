@@ -50,6 +50,5 @@ export interface Project {
   icon: string;
   features: string[];
   category: string;
-  duration: string;
   client?: string;
 }

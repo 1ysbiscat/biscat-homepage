@@ -21,7 +21,12 @@ export const services: Service[] = [
     title: "STAR-Grapher",
     description: "온톨로지 기반의 지능형 로봇 통합 관리 플랫폼으로, 다양한 로봇과 센서를 하나의 시스템에서 관리할 수 있습니다.",
     icon: "/assets/images/stargrapher.svg",
-    features: ["로봇 통합 관리", "실시간 모니터링", "작업 계획 수립", "자동화 워크플로우"]
+    features: [
+      "로봇이 작업 공정별로 자동 할당되고 센서 상태에 따라 동작을 바꿈",
+      "특정 로봇에서 오류 발생시, 어떤 작업 공정에 영향을 미치는지 추론 가능",
+      "로봇 상태, 작업 내역을 분석하여 생산 품질 분석이나 사고 대응에 활용",
+      "작업 스케줄을 기반으로 로봇을 동기화하거나 AMR, 이기종 로봇들과 협업 계획 가능"
+    ]
   },
   {
     id: 2,
@@ -35,42 +40,47 @@ export const services: Service[] = [
 export const projects: Project[] = [
   {
     id: 1,
-    title: "스마트 팩토리 자동화",
-    description: "STAR-Grapher를 활용한 제조업체의 완전 자동화 시스템 구축 프로젝트",
-    icon: "/assets/images/project-factory.jpg",
-    category: "제조업",
-    duration: "6개월",
-    client: "삼성전자",
+    title: "Servinggo",
+    description: "Servinggo의 주행 S/W CoNA를 개발했습니다.",
+    icon: "/assets/images/proj1.png",
+    category: "서빙로봇",
+    client: "코가로보틱스",
     features: ["로봇 통합 관리", "실시간 모니터링", "품질 관리 시스템", "예측 유지보수"]
   },
   {
     id: 2,
-    title: "물류창고 AI 시스템",
-    description: "STAR 인터페이스를 통한 물류창고 로봇 제어 및 관리 시스템",
-    icon: "/assets/images/project-warehouse.jpg",
-    category: "물류",
-    duration: "4개월",
-    client: "CJ대한통운",
+    title: "공장 로봇",
+    description: "S사의 공장 제조/물류 라인에 로봇을 공급하였습니다",
+    icon: "/assets/images/proj2.jpg",
+    category: "제조/물류",
+    client: "S cop",
     features: ["음성 명령 제어", "자동 분류 시스템", "재고 관리", "경로 최적화"]
   },
   {
     id: 3,
-    title: "병원 서비스 로봇",
-    description: "의료진과 환자를 위한 지능형 서비스 로봇 도입 프로젝트",
-    icon: "/assets/images/project-hospital.jpg",
-    category: "의료",
-    duration: "8개월",
-    client: "서울대병원",
+    title: "Tow Car",
+    description: "군부대내 식자재 물류 대차(자동/수동 주행)에 적용",
+    icon: "/assets/images/porj3.jpg",
+    category: "물류",
+    client: "(주)수성운반기계",
     features: ["환자 안내", "약품 배송", "감염 방지", "응급 상황 대응"]
   },
   {
     id: 4,
-    title: "교육용 로봇 플랫폼",
-    description: "학생들이 쉽게 로봇을 학습할 수 있는 교육용 플랫폼 개발",
-    icon: "/assets/images/project-education.jpg",
-    category: "교육",
-    duration: "5개월",
-    client: "한국과학기술원",
+    title: "Logistic Robot",
+    description: "다수의 회사와 PoC 수행을 통해 현장 적용성 검토",
+    icon: "/assets/images/proj4.jpg",
+    category: "물류",
+    client: "(주)씨에이시스템",
+    features: ["코딩 교육", "프로젝트 기반 학습", "협업 도구", "성과 분석"]
+  },
+  {
+    id: 5,
+    title: "Smart Chair",
+    description: "공공시설을 이용하는 사회적 약자 및 돌봄 인력의 삶의 질을 향상 시키는 서비스 제공",
+    icon: "/assets/images/proj5.png",
+    category: "R&D",
+    client: "Daedong",
     features: ["코딩 교육", "프로젝트 기반 학습", "협업 도구", "성과 분석"]
   }
 ];

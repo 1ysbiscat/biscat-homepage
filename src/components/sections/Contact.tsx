@@ -51,32 +51,6 @@ const Contact: React.FC = () => {
               <h3>✉️ 이메일</h3>
               <p>{contactInfo.email}</p>
             </div>
-            
-            <div className="contact-item">
-              <h3>🕒 운영시간</h3>
-              <p>{contactInfo.businessHours}</p>
-            </div>
-            
-            <div className="social-links">
-              <h3>소셜 미디어</h3>
-              <div className="social-icons">
-                {socialLinks.facebook && (
-                  <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer">
-                    📘 Facebook
-                  </a>
-                )}
-                {socialLinks.instagram && (
-                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer">
-                    📷 Instagram
-                  </a>
-                )}
-                {socialLinks.linkedin && (
-                  <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-                    💼 LinkedIn
-                  </a>
-                )}
-              </div>
-            </div>
           </div>
           
           <div className="contact-form">

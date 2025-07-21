@@ -17,27 +17,39 @@
 
 .project-card-image {
   height: 60%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #9c27b0 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
 }
 
-/* 프로젝트별 배경 색상 */
-.project-card-image[data-bg="1"] {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-.project-card-image[data-bg="2"] {
-  background: linear-gradient(135deg, #764ba2 0%, #9c27b0 100%);
+/* 공장 로봇 카드 (id: 2), Tow Car 카드 (id: 3), Logistic Robot 카드 (id: 4) 전용 스타일 */
+.project-card[data-project-id="2"] .project-card-image,
+.project-card[data-project-id="3"] .project-card-image,
+.project-card[data-project-id="4"] .project-card-image {
+  background: none;
+  padding: 0;
 }
 
-.project-card-image[data-bg="3"] {
-  background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+.project-card[data-project-id="2"] .project-image,
+.project-card[data-project-id="3"] .project-image,
+.project-card[data-project-id="4"] .project-image {
+  object-fit: cover;
+  border-radius: 0;
+  filter: none;
 }
 
-.project-card-image[data-bg="4"] {
-  background: linear-gradient(135deg, #667eea 0%, #9c27b0 100%);
-}
+/* 기존 data-bg 스타일들은 제거하고 통일된 보라색 그라데이션 사용 */
 
 .project-card-content {
   height: 40%;

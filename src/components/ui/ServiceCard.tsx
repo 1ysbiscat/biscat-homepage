@@ -33,11 +33,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick }) => {
       </div>
       <h3 className="service-title">{service.title}</h3>
       <p className="service-description">{service.description}</p>
-      <ul className="service-features">
-        {service.features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul>
       
       <div className="service-card-footer">
         <span className="click-hint">자세히 보기 →</span>

@@ -66,36 +66,6 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.service-features {
-  list-style: none;
-  text-align: left;
-}
-
-.service-features li {
-  padding: 0.3rem 0;
-  color: #555;
-  position: relative;
-  padding-left: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.service-card:hover .service-features li {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.service-features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #9c27b0;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.service-card:hover .service-features li::before {
-  color: white;
-}
-
 .service-card-footer {
   margin-top: auto;
   padding-top: 1rem;

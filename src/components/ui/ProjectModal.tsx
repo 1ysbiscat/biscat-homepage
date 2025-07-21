@@ -45,7 +45,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
           <h2 className="modal-title">{project.title}</h2>
           <div className="project-info">
             <span className="project-category-badge">{project.category}</span>
-            <span className="project-duration-badge">{project.duration}</span>
           </div>
         </div>
         
@@ -61,21 +60,25 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
             </div>
           )}
           
+          {project.id === 2 && (
+            <div className="project-detail-image">
+              <img 
+                src="/assets/images/proj2_detail.jpg" 
+                alt="공장 로봇 프로젝트 상세 이미지"
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  borderRadius: '10px', 
+                  marginBottom: '20px',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                }}
+              />
+            </div>
+          )}
+          
           <div className="modal-detailed-description">
             <h3>프로젝트 상세</h3>
             {getProjectDetails(project)}
-          </div>
-          
-          <div className="modal-features">
-            <h3>주요 특징</h3>
-            <div className="features-grid">
-              {project.features.map((feature, index) => (
-                <div key={index} className="feature-item">
-                  <span className="feature-icon">✓</span>
-                  <span className="feature-text">{feature}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
@@ -89,45 +92,44 @@ const getProjectDetails = (project: Project) => {
       return (
         <div>
           <p>
-            삼성전자의 스마트 팩토리 자동화 프로젝트는 BISCAT의 STAR-Grapher 플랫폼을 활용하여 
-            기존 제조 공정을 완전히 디지털화하고 자동화한 대규모 프로젝트입니다.
+            코가로보틱스의 주력 상품인 서빙로봇 서빙고(Servinngo)의 주행 S/W CoNA를 개발했고, 서빙고 클래식, 미니, 프라임 등의 제품화 및 양산을 경험하였습니다.
           </p>
-          <h4>프로젝트 성과</h4>
+          <h4>코가로보틱스 개발건</h4>
           <ul>
-            <li>생산성 45% 향상</li>
-            <li>불량률 60% 감소</li>
-            <li>운영비용 30% 절감</li>
-            <li>작업자 안전사고 제로</li>
+            <li>서빙고 GUI 개발</li>
+            <li>통합 ACS 개발</li>
+            <li>SLAM MAP EDITOR 개발</li>
+            <li>WCMS 개발</li>
+            <li>각종 디자인업무 수행(팜플렛, 브로슈어, 영상편집, 3D MODELING 등)</li>
           </ul>
-          <h4>적용 기술</h4>
-          <ul>
-            <li>온톨로지 기반 로봇 통합 관리 시스템</li>
-            <li>AI 기반 품질 관리 및 예측 분석</li>
-            <li>실시간 데이터 수집 및 모니터링</li>
-            <li>디지털 트윈 기반 시뮬레이션</li>
-          </ul>
+          
+          <div className="project-video-section">
+            <h4>프로젝트 영상</h4>
+            <div className="video-container">
+              <video 
+                controls 
+                width="100%" 
+                height="auto"
+                style={{ borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }}
+              >
+                <source src="/assets/images/로보월드_홍보영상_ㄹㅇ찐막.mp4" type="video/mp4" />
+                브라우저에서 비디오를 지원하지 않습니다.
+              </video>
+            </div>
+          </div>
         </div>
       );
     case 2: // 물류창고
       return (
         <div>
           <p>
-            CJ대한통운의 물류창고에 STAR 인터페이스를 도입하여 작업자들이 음성 명령만으로 
-            로봇을 제어할 수 있는 혁신적인 물류 자동화 시스템을 구축했습니다.
+            S사 베트남 공장에 제조/물류 라인에 AMR을 공급하고, S/W를 적용하였습니다.
           </p>
-          <h4>프로젝트 성과</h4>
+          <h4>프로젝트 R&R</h4>
           <ul>
-            <li>처리 속도 60% 향상</li>
-            <li>분류 정확도 99.8% 달성</li>
-            <li>인력 운영비 40% 절감</li>
-            <li>작업 효율성 50% 개선</li>
-          </ul>
-          <h4>적용 기술</h4>
-          <ul>
-            <li>자연어 기반 로봇 제어 시스템</li>
-            <li>AI 기반 자동 분류 및 경로 최적화</li>
-            <li>실시간 재고 관리 시스템</li>
-            <li>음성 인식 및 처리 기술</li>
+            <li>주행 S/W Core 개발</li>
+            <li>AMR GUI 개발</li>
+            <li>정기적 유지/보수</li>
           </ul>
         </div>
       );
@@ -135,46 +137,61 @@ const getProjectDetails = (project: Project) => {
       return (
         <div>
           <p>
-            서울대병원에 도입된 지능형 서비스 로봇은 의료진의 업무 효율성을 높이고 
-            환자들에게 더 나은 의료 서비스를 제공하기 위해 개발되었습니다.
+            (주)수성운반기계와 협업하여 군부대내 식자재 물류 대차(자동/수동 주행)에 적용하였습니다.
           </p>
-          <h4>프로젝트 성과</h4>
-          <ul>
-            <li>의료진 업무 효율 35% 향상</li>
-            <li>환자 만족도 90% 이상</li>
-            <li>감염 위험 70% 감소</li>
-            <li>응급 대응 시간 50% 단축</li>
-          </ul>
-          <h4>적용 기술</h4>
-          <ul>
-            <li>의료 환경 특화 로봇 시스템</li>
-            <li>감염 방지 및 멸균 기술</li>
-            <li>환자 안내 및 길찾기 AI</li>
-            <li>응급 상황 감지 및 알림 시스템</li>
-          </ul>
+          
+          <div className="project-video-section">
+            <h4>프로젝트 영상</h4>
+            <div className="video-container">
+              <video 
+                controls 
+                width="100%" 
+                height="auto"
+                style={{ borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }}
+              >
+                <source src="/assets/images/_talkv_wt2a6yhLX5_97zvGnjXreU9IYniAUUl4k_talkv_high.MP4" type="video/mp4" />
+                브라우저에서 비디오를 지원하지 않습니다.
+              </video>
+            </div>
+          </div>
         </div>
       );
     case 4: // 교육용 로봇
       return (
         <div>
           <p>
-            한국과학기술원과 함께 개발한 교육용 로봇 플랫폼은 학생들이 로봇공학과 
-            AI 기술을 직접 체험하고 학습할 수 있는 혁신적인 교육 도구입니다.
+            로봇 제조사인 CA SYSTEM과 여러 프로젝트를 진행하고 있습니다.
           </p>
-          <h4>프로젝트 성과</h4>
+        </div>
+      );
+    case 5: // Smart Chair
+      return (
+        <div>
+          <p>
+            공공시설을 이용하는 사회적 약자 및 돌봄 인력의 삶의 질을 향상시키는 서비스를 제공합니다.
+          </p>
+          <h4>프로젝트 개요</h4>
           <ul>
-            <li>학습 참여도 80% 증가</li>
-            <li>프로그래밍 이해도 70% 향상</li>
-            <li>창의적 문제해결 능력 개발</li>
-            <li>협업 능력 강화</li>
+            <li>사회적 약자를 위한 스마트 의자 개발</li>
+            <li>돌봄 인력 지원 시스템 구축</li>
+            <li>공공시설 접근성 향상</li>
+            <li>사용자 맞춤형 서비스 제공</li>
           </ul>
-          <h4>적용 기술</h4>
-          <ul>
-            <li>교육용 로봇 프로그래밍 인터페이스</li>
-            <li>프로젝트 기반 학습 플랫폼</li>
-            <li>실시간 협업 도구</li>
-            <li>학습 성과 분석 시스템</li>
-          </ul>
+          
+          <div className="project-video-section">
+            <h4>프로젝트 영상</h4>
+            <div className="video-container">
+              <video 
+                controls 
+                width="100%" 
+                height="auto"
+                style={{ borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }}
+              >
+                <source src="/assets/images/대동.MOV" type="video/quicktime" />
+                브라우저에서 비디오를 지원하지 않습니다.
+              </video>
+            </div>
+          </div>
         </div>
       );
     default:
