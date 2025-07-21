@@ -6,6 +6,10 @@
   align-items: unset !important;
 }
 
+.contact .section-title {
+  color: #9c27b0;
+}
+
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
