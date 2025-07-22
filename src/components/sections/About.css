@@ -59,37 +59,26 @@
   margin-top: 3rem;
 }
 
-.detail-item {
-  background: rgba(255, 255, 255, 0.1);
+.about-intro-section .detail-item {
+  background: rgba(255, 255, 255, 0.85) !important;
   padding: 2rem;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px) !important;
 }
 
-.detail-item h4 {
+.about-intro-section .detail-item h4 {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: white;
-}
-
-.detail-item p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: white !important;
+  color: #333 !important;
 }
 
 .about-intro-section .detail-item p {
   font-size: 1rem;
   line-height: 1.6;
-  color: white !important;
-}
-
-.about-intro .detail-item p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: white !important;
+  color: #666 !important;
 }
 
 /* 핵심 철학 섹션 - 풀스크린 */
