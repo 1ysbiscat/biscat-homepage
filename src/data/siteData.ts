@@ -60,7 +60,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Tow Car",
     description: "군부대내 식자재 물류 대차(자동/수동 주행)에 적용",
-    icon: "/assets/images/porj3.jpg",
+    icon: "/assets/images/proj3.jpg",
     category: "물류",
     client: "(주)수성운반기계",
     features: ["환자 안내", "약품 배송", "감염 방지", "응급 상황 대응"]
