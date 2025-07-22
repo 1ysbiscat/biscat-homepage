@@ -11,6 +11,8 @@
   z-index: 1000;
   padding: 20px;
   overflow-y: auto;
+  /* 모달이 화면 크기에 맞게 표시되도록 */
+  box-sizing: border-box;
 }
 
 .modal-content {
@@ -23,6 +25,8 @@
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   animation: modalSlideIn 0.3s ease-out;
+  /* 모든 내용이 완전히 포함되도록 */
+  box-sizing: border-box;
 }
 
 /* Hide scrollbar but keep functionality */
@@ -51,7 +55,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   border: none;
   width: 40px;
   height: 40px;
@@ -63,19 +67,26 @@
   cursor: pointer;
   transition: all 0.2s ease;
   z-index: 10;
-  color: #666;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .modal-close:hover {
-  background: rgba(0, 0, 0, 0.2);
-  color: #333;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
   transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .modal-header {
   padding: 40px 40px 20px 40px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
+  /* 보라색 그라데이션 배경 */
+  background: linear-gradient(135deg, #9c27b0 0%, #667eea 100%);
+  border-radius: 16px 16px 0 0;
+  box-sizing: border-box;
+  color: white;
 }
 
 .modal-icon {
@@ -87,34 +98,42 @@
   margin-right: auto;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 /* 프로젝트별 배경 색상 */
 .modal-icon[data-project-id="1"] {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 100% 100%;
 }
 
 .modal-icon[data-project-id="2"] {
   background: linear-gradient(135deg, #764ba2 0%, #9c27b0 100%);
+  background-size: 100% 100%;
 }
 
 .modal-icon[data-project-id="3"] {
   background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+  background-size: 100% 100%;
 }
 
 .modal-icon[data-project-id="4"] {
   background: linear-gradient(135deg, #667eea 0%, #9c27b0 100%);
+  background-size: 100% 100%;
+}
+
+.modal-icon[data-project-id="5"] {
+  background: linear-gradient(135deg, #9c27b0 0%, #667eea 100%);
+  background-size: 100% 100%;
 }
 
 .modal-title {
   font-size: 2.5em;
   font-weight: 700;
   margin: 0 0 15px 0;
-  color: #333;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /* 흰색 텍스트 */
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .project-info {
@@ -132,12 +151,18 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: rgba(255, 255, 255, 0.9);
+  color: #9c27b0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .modal-body {
   padding: 30px 40px 40px 40px;
+  /* 바디 내용이 완전히 표시되도록 */
+  background: white;
+  border-radius: 0 0 16px 16px;
+  box-sizing: border-box;
 }
 
 .modal-description {
@@ -151,9 +176,10 @@
 .client-section {
   margin-bottom: 30px;
   padding: 20px;
-  background: #f8f9ff;
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
   border-radius: 12px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #9c27b0;
+  box-shadow: 0 2px 8px rgba(156, 39, 176, 0.1);
 }
 
 .client-section h3 {
@@ -172,7 +198,7 @@
 .client-name-large {
   font-size: 1.4em;
   font-weight: 700;
-  color: #667eea;
+  color: #9c27b0;
 }
 
 .modal-detailed-description {
@@ -191,7 +217,7 @@
 .modal-detailed-description h4 {
   font-size: 1.2em;
   font-weight: 600;
-  color: #667eea;
+  color: #9c27b0;
   margin: 25px 0 15px 0;
 }
 
@@ -218,7 +244,7 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #9c27b0;
   font-weight: bold;
 }
 
@@ -242,18 +268,20 @@
   align-items: flex-start;
   gap: 12px;
   padding: 15px;
-  background: #f8f9ff;
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.08) 0%, rgba(102, 126, 234, 0.08) 100%);
   border-radius: 8px;
   transition: all 0.2s ease;
+  border: 1px solid rgba(156, 39, 176, 0.1);
 }
 
 .feature-item:hover {
-  background: #f0f2ff;
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(102, 126, 234, 0.15) 100%);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.2);
 }
 
 .feature-icon {
-  color: #667eea;
+  color: #9c27b0;
   font-weight: bold;
   font-size: 1.1em;
   margin-top: 2px;
@@ -327,4 +355,57 @@
     height: 35px;
     font-size: 20px;
   }
+}
+
+/* 프로젝트 비디오 섹션 */
+.project-video-section {
+  margin-top: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.05) 0%, rgba(102, 126, 234, 0.05) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(156, 39, 176, 0.1);
+}
+
+.project-video-section h4 {
+  color: #9c27b0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+}
+
+.video-container {
+  margin-top: 15px;
+}
+
+.video-container video {
+  border: 2px solid rgba(156, 39, 176, 0.2);
+  transition: all 0.3s ease;
+}
+
+.video-container video:hover {
+  border-color: #9c27b0;
+  box-shadow: 0 8px 24px rgba(156, 39, 176, 0.3) !important;
+}
+
+/* 유튜브 임베드 스타일 */
+.youtube-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  margin-top: 15px;
+}
+
+.youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(156, 39, 176, 0.2);
+  transition: all 0.3s ease;
+}
+
+.youtube-container iframe:hover {
+  border-color: #9c27b0;
+  box-shadow: 0 8px 24px rgba(156, 39, 176, 0.3) !important;
 }

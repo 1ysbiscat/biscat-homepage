@@ -111,7 +111,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
                 <div className="comparison-section">
                   <div className="comparison-visual">
                     <img 
-                      src="/assets/images/비교.jpg" 
+                      src="/assets/images/sg.jpg" 
                       alt="기존 시스템과 STAR-Grapher 비교" 
                       className="comparison-image"
                     />
@@ -143,7 +143,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose })
                 <div className="comparison-section">
                   <div className="comparison-visual">
                     <img 
-                      src="/assets/images/star비교.jpg" 
+                      src="/assets/images/s.jpg" 
                       alt="STAR 시스템 비교" 
                       className="comparison-image"
                     />

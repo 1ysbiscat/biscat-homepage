@@ -8,6 +8,34 @@ interface ProjectModalProps {
   onClose: () => void;
 }
 
+// 유튜브 ID 추출 함수
+const getYouTubeVideoId = (url: string): string => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : '';
+};
+
+// 유튜브 임베드 컴포넌트
+const YouTubeEmbed: React.FC<{ videoId: string; title: string }> = ({ videoId, title }) => {
+  return (
+    <div className="youtube-container">
+      <iframe
+        width="100%"
+        height="315"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title={title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        style={{ 
+          borderRadius: '10px', 
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' 
+        }}
+      />
+    </div>
+  );
+};
+
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
@@ -106,15 +134,10 @@ const getProjectDetails = (project: Project) => {
           <div className="project-video-section">
             <h4>프로젝트 영상</h4>
             <div className="video-container">
-              <video 
-                controls 
-                width="100%" 
-                height="auto"
-                style={{ borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }}
-              >
-                <source src="/assets/images/로보월드_홍보영상_ㄹㅇ찐막.mp4" type="video/mp4" />
-                브라우저에서 비디오를 지원하지 않습니다.
-              </video>
+              <YouTubeEmbed 
+                videoId="qFLs1KiI1ac"
+                title="서빙로봇 서빙고 프로젝트 영상"
+              />
             </div>
           </div>
         </div>
@@ -143,15 +166,10 @@ const getProjectDetails = (project: Project) => {
           <div className="project-video-section">
             <h4>프로젝트 영상</h4>
             <div className="video-container">
-              <video 
-                controls 
-                width="100%" 
-                height="auto"
-                style={{ borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }}
-              >
-                <source src="/assets/images/_talkv_wt2a6yhLX5_97zvGnjXreU9IYniAUUl4k_talkv_high.MP4" type="video/mp4" />
-                브라우저에서 비디오를 지원하지 않습니다.
-              </video>
+              <YouTubeEmbed 
+                videoId="hI_cnOGJ1QQ"
+                title="군부대 식자재 물류 대차 프로젝트 영상"
+              />
             </div>
           </div>
         </div>
@@ -177,19 +195,13 @@ const getProjectDetails = (project: Project) => {
             <li>공공시설 접근성 향상</li>
             <li>사용자 맞춤형 서비스 제공</li>
           </ul>
-          
           <div className="project-video-section">
             <h4>프로젝트 영상</h4>
             <div className="video-container">
-              <video 
-                controls 
-                width="100%" 
-                height="auto"
-                style={{ borderRadius: '10px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)' }}
-              >
-                <source src="/assets/images/대동.MOV" type="video/quicktime" />
-                브라우저에서 비디오를 지원하지 않습니다.
-              </video>
+              <YouTubeEmbed 
+                videoId="ljwdV-zb8qc"
+                title="Smart Chair 프로젝트 영상"
+              />
             </div>
           </div>
         </div>

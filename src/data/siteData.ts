@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description: "S사의 공장 제조/물류 라인에 로봇을 공급하였습니다",
     icon: "/assets/images/proj2.jpg",
     category: "제조/물류",
-    client: "S cop",
+    client: "S사",
     features: ["음성 명령 제어", "자동 분류 시스템", "재고 관리", "경로 최적화"]
   },
   {
