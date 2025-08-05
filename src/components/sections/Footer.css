@@ -8,15 +8,24 @@
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 2rem;
+}
+
+.footer-main {
+  width: 100%;
+}
+
+.footer-logo-company {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .footer-section h3,
 .footer-section h4 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #ffffff;
 }
 
@@ -84,7 +93,7 @@
 
 /* 푸터 로고 스타일 */
 .footer-logo {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .footer-logo-image {
@@ -102,8 +111,7 @@
 
 /* 반응형 */
 @media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .footer {
+    display: none !important;
   }
 }

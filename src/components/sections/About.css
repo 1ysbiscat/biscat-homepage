@@ -13,6 +13,23 @@
   content: '';
   position: absolute;
   top: 0;
+  lef  .philosophy-container {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.about-intro-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -216,7 +233,8 @@
 /* 조직 문화 섹션 - 풀스크린 */
 .culture-section {
   min-height: 100vh;
-  background-size: 100% 100%;
+  background-image: var(--bg-image);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -232,15 +250,34 @@
   padding: 4rem 2rem;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.culture-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .culture-section .section-title {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   margin-bottom: 2rem;
+}
+
+.culture-body {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 0;
 }
 
 /* 3. 조직 문화 섹션 (기존 스타일 유지) */
@@ -328,28 +365,52 @@
   .about-intro-section,
   .philosophy-section,
   .culture-section {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
   }
   
   .about-intro-container,
   .philosophy-container,
   .culture-container {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
   
   .about-intro-section .section-title,
-  .philosophy-section .section-title,
   .culture-section .section-title {
-    font-size: 2rem;
-  }
-  
-  .about-intro-title {
     font-size: 1.8rem;
-    line-height: 1.4;
+    margin-bottom: 1rem;
   }
   
-  .about-intro-body {
-    font-size: 1.1rem;
+  .philosophy-section .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-weight: 700;
+    color: #9c27b0;
+  }
+  
+  .about-intro-title,
+  .culture-intro-title {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  
+  .about-intro-body,
+  .culture-intro-body {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
   
   .company-logo .logo-image {
@@ -368,6 +429,165 @@
     font-size: 1rem;
   }
   
+  /* 조직 문화 섹션 - 회사 소개와 동일한 보라색 배경 */
+  .culture-section {
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%) !important;
+  }
+  
+  .culture-container {
+    color: white !important;
+  }
+  
+  /* 모바일에서 조직 문화 섹션에 회사 로고 추가 */
+  .culture-container::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url('../../assets/images/biscat-logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+  }
+  
+  .culture-section .section-title {
+    color: white !important;
+  }
+  
+  .culture-intro-title {
+    color: white !important;
+  }
+  
+  .culture-intro-body,
+  .culture-body {
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+  
+  /* 모바일에서 culture-box 완전 제거 */
+  .culture-box {
+    background: none !important;
+    backdrop-filter: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    text-align: left !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  .ontology-section {
+    text-align: left;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .ontology-title {
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  
+  .ontology-title::before {
+    content: '🧠';
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+  
+  .ontology-description {
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* 핵심 철학 섹션 전체 높이 조정 */
+  .philosophy-section {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 3rem 1rem 2rem 1rem !important;
+  }
+  
+  .philosophy-container {
+    height: auto;
+    max-height: 90vh;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  
+  .philosophy-lead {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .philosophy-body {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* 모바일에서 핵심 철학 섹션에 가상 로고 추가 */
+  .philosophy-section {
+    background: white !important;
+  }
+  
+  .philosophy-container {
+    color: #333 !important;
+  }
+  
+  .philosophy-container::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url('../../assets/images/ontology.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0.1rem;
+  }
+  
+  /* 모바일에서 핵심 철학 이미지 및 배경 완전 숨김 */
+  .philosophy-icon {
+    display: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  .philosophy-icon::before {
+    display: none !important;
+  }
+  
+  .philosophy-image {
+    display: none !important;
+  }
+  
+  .philosophy-fallback {
+    display: none !important;
+  }
+
+  .philosophy-content {
+    padding: 0;
+    flex: 1;
+  }
+  
   .company-details {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -375,19 +595,6 @@
   
   .detail-item {
     padding: 1.5rem;
-  }
-  
-  .culture-box {
-    padding: 1.5rem 2rem;
-    max-width: 90%;
-  }
-  
-  .culture-title {
-    font-size: 2rem;
-  }
-  
-  .culture-body {
-    font-size: 1rem;
   }
 }
 
@@ -398,16 +605,47 @@
     font-size: 1.8rem;
   }
   
-  .about-intro-title {
+  .about-intro-title,
+  .culture-intro-title {
     font-size: 1.5rem;
-  }
-  
-  .culture-box {
-    padding: 1.5rem;
-    margin: 0 1rem;
   }
   
   .company-logo .logo-image {
     height: 60px;
   }
 }
+
+/* 점들의 부드럽고 큰 생성, 확대/축소, 소멸 애니메이션 */
+@keyframes pointsLifeCycle {
+  0% { opacity: 0; }
+  5% { opacity: 0.3; }
+  10% { opacity: 0.7; }
+  15% { opacity: 1; }
+  25% { opacity: 1; }
+  40% { opacity: 1; }
+  55% { opacity: 1; }
+  70% { opacity: 1; }
+  85% { opacity: 0.8; }
+  95% { opacity: 0.3; }
+  100% { opacity: 0; }
+}
+
+/* 연결선이 점들과 함께 나타났다 사라지는 애니메이션 */
+@keyframes connectionsFlow {
+  0%, 15% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  25%, 75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  85%, 100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* 기존 애니메이션 제거 */

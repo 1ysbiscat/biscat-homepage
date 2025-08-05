@@ -220,51 +220,93 @@
 
 /* 모바일 스타일 */
 @media (max-width: 768px) {
-  .mobile-menu-btn {
-    display: flex;
+  .header {
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .header-scrolled {
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
   }
 
   .header-content {
-    justify-content: space-between;
+    padding: 0.5rem 1rem;
   }
 
   .logo {
-    position: static;
+    display: none;
   }
 
   .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    box-shadow: 0 4px 6px rgba(37, 3, 20, 0.1);
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    display: none;
   }
 
+  .mobile-menu-btn {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-menu-btn span {
+    background: #ffffff;
+  }
+
+  .mobile-menu-btn.active span {
+    background: #250314 !important;
+  }
+
+  /* 모바일 메뉴가 열렸을 때 */
   .nav-open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 1000;
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
 
-  .nav-list {
+  .nav-open .nav-list {
     flex-direction: column;
     gap: 0;
-    padding: 1rem 0;
+    padding: 4rem 0 2rem 0;
+    height: 100%;
+    justify-content: flex-start;
   }
 
-  .nav-item {
+  .nav-open .nav-item {
     border-bottom: 1px solid #eee;
   }
 
-  .nav-link {
+  .nav-open .nav-link {
     display: block;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     width: 100%;
     text-align: left;
+    font-size: 1.1rem;
+    color: #250314 !important;
+  }
+
+  .nav-open .nav-link:hover {
+    color: #9c27b0 !important;
+    background: rgba(156, 39, 176, 0.05);
+  }
+
+  .nav-open .nav-link.active {
+    color: #9c27b0 !important;
   }
 }

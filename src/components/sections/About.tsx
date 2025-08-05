@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import member2Image from '../../assets/images/member2.jpg';
 
 const About: React.FC = () => {
   return (
@@ -83,10 +84,10 @@ const About: React.FC = () => {
       </section>
 
       {/* 3. 조직 문화 섹션 - 풀스크린 */}
-      <section id="culture" className="section culture-section" 
-        style={{
-          backgroundImage: `url(/assets/images/member2.jpg)`
-        }}
+      <section 
+        id="culture" 
+        className="section culture-section"
+        style={{ '--bg-image': `url(${member2Image})` } as React.CSSProperties}
       >
         <div className="culture-container">
           <div className="culture-box">

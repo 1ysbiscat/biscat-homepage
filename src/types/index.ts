@@ -25,7 +25,7 @@ export interface TeamMember {
 
 export interface ContactInfo {
   address: string;
-  phone: string;
+  phone?: string;
   email: string;
   businessHours: string;
 }

@@ -3,7 +3,7 @@ import { Company, Service, TeamMember, ContactInfo, SocialLinks, NavigationItem,
 
 export const company: Company = {
   name: "BISCAT",
-  description: "혁신적인 비즈니스 솔루션으로 고객의 성공을 이끌어내는 전문 기업입니다.",
+  description: "",
 };
 
 export const navigation: NavigationItem[] = [
@@ -118,7 +118,6 @@ export const team: TeamMember[] = [
 
 export const contactInfo: ContactInfo = {
   address: "서울시 성동구 왕십리로 222, HIT 518호",
-  phone: "02-1234-5678",
   email: "sales@biscat.co.kr",
   businessHours: "평일 9:00 - 18:00"
 };

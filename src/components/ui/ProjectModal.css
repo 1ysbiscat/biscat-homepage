@@ -79,7 +79,7 @@
 }
 
 .modal-header {
-  padding: 40px 40px 20px 40px;
+  padding: 20px 40px 15px 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
   /* 보라색 그라데이션 배경 */
@@ -90,13 +90,13 @@
 }
 
 .modal-icon {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 3px solid rgba(255, 255, 255, 0.3);
 }
@@ -128,9 +128,9 @@
 }
 
 .modal-title {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 700;
-  margin: 0 0 15px 0;
+  margin: 0 0 8px 0;
   /* 흰색 텍스트 */
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -140,7 +140,7 @@
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 15px;
+  margin-top: 8px;
   flex-wrap: wrap;
 }
 
@@ -305,7 +305,7 @@
   }
   
   .modal-header {
-    padding: 30px 20px 15px 20px;
+    padding: 15px 20px 10px 20px;
   }
   
   .modal-body {
@@ -313,15 +313,21 @@
   }
   
   .modal-title {
-    font-size: 2em;
+    font-size: 1.6em;
+  }
+  
+  .modal-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
   }
   
   .modal-icon-image,
   .modal-icon-emoji,
   .modal-icon-fallback {
-    font-size: 60px;
-    width: 60px;
-    height: 60px;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
   }
   
   .features-grid {
@@ -337,7 +343,7 @@
 
 @media (max-width: 480px) {
   .modal-header {
-    padding: 20px 15px 15px 15px;
+    padding: 10px 15px 8px 15px;
   }
   
   .modal-body {
@@ -345,7 +351,13 @@
   }
   
   .modal-title {
-    font-size: 1.8em;
+    font-size: 1.4em;
+  }
+  
+  .modal-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 3px;
   }
   
   .modal-close {

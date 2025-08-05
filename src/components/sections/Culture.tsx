@@ -1,14 +1,13 @@
 import React from 'react';
 import './Culture.css';
+import member2Image from '../../assets/images/member2.jpg';
 
 const Culture: React.FC = () => {
   return (
     <section id="culture" className="section culture">
       <div 
         className="culture-background"
-        style={{
-          backgroundImage: `url(/assets/images/member2.jpg)`
-        }}
+        style={{ '--bg-image': `url(${member2Image})` } as React.CSSProperties}
       >
         <div className="culture-overlay">
           <div className="culture-content">

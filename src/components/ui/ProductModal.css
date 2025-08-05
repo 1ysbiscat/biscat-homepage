@@ -55,6 +55,18 @@
   font-weight: bold;
 }
 
+/* 모바일에서 고정 X 버튼 */
+@media (max-width: 768px) {
+  .modal-close {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    z-index: 1001 !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+}
+
 .modal-close:hover {
   background: rgba(0, 0, 0, 0.8);
   color: white;
@@ -67,6 +79,13 @@
   background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
   color: white;
   border-radius: 20px 20px 0 0;
+}
+
+/* 데스크톱에서만 둥근 모서리 적용 */
+@media (min-width: 769px) {
+  .modal-header {
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .modal-header .modal-icon {
@@ -220,11 +239,39 @@
 /* 모바일 반응형 */
 @media (max-width: 768px) {
   .modal-backdrop {
-    padding: 1rem;
+    padding: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
   }
   
-  .modal-header {
-    padding: 2rem 2rem 1.5rem;
+  .modal-backdrop .modal-content {
+    max-width: none !important;
+    width: 100vw !important;
+    max-height: none !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    overflow-y: auto !important;
+    position: relative !important;
+  }
+  
+  .modal-close {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    z-index: 1001 !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+  
+  .modal-backdrop .modal-content .modal-header {
+    padding: 3rem 2rem 1.5rem;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
   }
   
   .modal-title {
@@ -251,11 +298,30 @@
 
 @media (max-width: 480px) {
   .modal-backdrop {
-    padding: 0.5rem;
+    padding: 0;
+  }
+  
+  .modal-content {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .modal-close {
+    position: fixed;
+    top: 0.8rem;
+    right: 0.8rem;
+    z-index: 1001;
+    width: 35px;
+    height: 35px;
+    font-size: 1.8rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
   }
   
   .modal-header {
-    padding: 1.5rem 1.5rem 1rem;
+    padding: 2.5rem 1.5rem 1rem;
+    border-radius: 0;
   }
   
   .modal-title {
