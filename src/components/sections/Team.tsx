@@ -20,7 +20,7 @@ const Team: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="section team">
+    <section id="team" className="section team">
       <div className="container">
         <h2 className="section-title">프로젝트</h2>
         <p className="section-subtitle">

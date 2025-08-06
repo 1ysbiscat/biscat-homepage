@@ -20,7 +20,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section id="products" className="section services">
+    <section id="services" className="section services">
       <div className="container">
         <h2 className="section-title">제품 소개</h2>
         <p className="section-subtitle">

@@ -12,9 +12,9 @@ const Header: React.FC = () => {
   const navigation = [
     { id: "home", label: "홈", path: "/", isScroll: true },
     { id: "about", label: "회사소개", path: "/#about", isScroll: true },
-    { id: "services", label: "제품소개", path: "/services" },
-    { id: "team", label: "프로젝트", path: "/team" },
-    { id: "contact", label: "문의하기", path: "/contact" },
+    { id: "services", label: "제품소개", path: "/#services", isScroll: true },
+    { id: "team", label: "프로젝트", path: "/#team", isScroll: true },
+    { id: "contact", label: "문의하기", path: "/#contact", isScroll: true },
     { id: "ir", label: "IR", isButton: true }
   ];
 

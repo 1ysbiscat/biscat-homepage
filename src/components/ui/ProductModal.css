@@ -274,6 +274,10 @@
     border-top-right-radius: 0 !important;
   }
   
+  .modal-body {
+    padding: 1.5rem 1rem;
+  }
+  
   .modal-title {
     font-size: 2rem;
   }
@@ -464,6 +468,32 @@
   .comparison-table th,
   .comparison-table td {
     padding: 0.7rem 0.5rem;
+  }
+  
+  /* 모바일에서 비교 이미지 최적화 */
+  .ontology-diagram,
+  .comparison-image {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .comparison-section {
+    margin: 1rem 0;
+    padding: 0;
+  }
+  
+  .comparison-visual {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #f8f9fa;
   }
 }
 
